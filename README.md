@@ -6,8 +6,10 @@ This browser based web application to help people improve their sleep schedule.
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
+
+* Hi my name is Shayan and I'll be working on coding and project managing in this project.
+* Muhammad (Sherry) Jameel, I'm the designer :3
 * ...Coda Miles, i made the repo :)
-* ...Muhammad (Sherry) Jameel
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
@@ -19,9 +21,9 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 ## 4. Complete setup/installion/usage
 State what a user needs to do when they come to your project.  How do others start using your code or application?
 Here are the steps ...
-* ...
-* ...
-* ...
+* First they have to answer a few questions about their sleep scheduale
+* Second, they would receive a scheduale from the system to help them
+* And the last step is to commit to the instructions and new scheduale
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
