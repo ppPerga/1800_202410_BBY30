@@ -6,9 +6,8 @@ This browser based web application to help people improve their sleep schedule.
 
 ## 2. Names of Contributors
 List team members and/or short bio's here... 
-* Muhammad (sherry) Jameel
-* Shayan nikpour
-* Coda miles
+* ...Coda Miles, i made the repo :)
+* ...Muhammad (Sherry) Jameel
 	
 ## 3. Technologies and Resources Used
 List technologies (with version numbers), API's, icons, fonts, images, media or data sources, and other resources that were used.
