@@ -49,7 +49,14 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # Acknowledge source
+    /settings.svg            # https://www.svgrepo.com/svg/13646/settings
+    /home.svg                # https://www.svgrepo.com/svg/13696/house
+    /zzz.png                 # https://images.emojiterra.com/openmoji/v15.0/256px/1f4a4.png
+    /yinyang.svg             # https://www.svgrepo.com/svg/479216/yin-yang-taiji-diagram
+    /progress.svg            # https://www.svgrepo.com/svg/510284/trend-up
+    /schedule.svg            # https://www.svgrepo.com/svg/447776/schedule
+    /profile.svg             # https://www.svgrepo.com/svg/522440/profile
+    /colourPalette.png       # https://coolors.co/31593b-539258-bd8d65-caae91-6a2e35
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
