@@ -9,8 +9,7 @@ List team members and/or short bio's here...
 
 * Hi my name is Shayan and I'll be working on coding and project managing in this project.
 * ...
-=======
-* ...Coda Miles, i made the repo :)
+* ...Coda Miles, i made the repo :
 
 * ...
 	
