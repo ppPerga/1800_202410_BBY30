@@ -57,6 +57,7 @@ It has the following subfolders and files:
     /schedule.svg            # https://www.svgrepo.com/svg/447776/schedule
     /profile.svg             # https://www.svgrepo.com/svg/522440/profile
     /colourPalette.png       # https://coolors.co/31593b-539258-bd8d65-caae91-6a2e35
+    /logout.svg              # https://www.svgrepo.com/svg/334065/log-out
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
