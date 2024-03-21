@@ -33,10 +33,11 @@ h1 {
 }
 
 .login-button {
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-size: 18px;
-    background-color: cyan;
-    border-radius: 40px;
+    color:white;
+    background-color: #000100;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
