@@ -45,3 +45,17 @@ h1 {
 .login-button:hover {
     background-color: 	#5f9ea0; /* Darker green background on hover */
 }
+
+.start-survey {
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
+.start-survey-buttons {
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+
+#start-survey-last-question {
+    padding-bottom: 50%;
+}
