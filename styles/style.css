@@ -41,6 +41,15 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+.survey-button {
+    padding: 5px 5px;
+    font-size: 18px;
+    color:white;
+    background-color: #000100;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 .login-button:hover {
     background-color: 	#5f9ea0; /* Darker green background on hover */
@@ -50,6 +59,10 @@ h1 {
     padding-left: 2%;
     padding-bottom: 2%;
 }
+.survey {
+    padding: 5%;
+    height:10%;
+}
 
 .start-survey-buttons {
     padding-left: 5%;
@@ -57,5 +70,5 @@ h1 {
 }
 
 #start-survey-last-question {
-    padding-bottom: 50%;
+    padding-bottom: 20%;
 }

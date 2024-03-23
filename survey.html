@@ -2,221 +2,223 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="comp1800 template" content="My 1800 App">
+  <title>My BCIT Project</title>
+  <meta name="comp1800 template" content="My 1800 App">
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap Library CSS CDN go here -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap Library CSS CDN go here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- Boostrap Library JS CDN  go here -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- Boostrap Library JS CDN  go here -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
-    <!-- Other libraries go here -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-
-    <!-- Link to styles of your own -->
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-    <link rel="stylesheet" href="./styles/style.css">
+  <!-- Other libraries go here -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script type="module" src="/scripts/survey.js"></script>
+  <!-- Link to styles of your own -->
+  <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+  <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
 <body>
 
-    <!------------------------------>
-    <!-- Your HTML Layout go here -->
-    <!------------------------------>
-    <!-- Stuff for body goes here -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #3943B7;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./main.html">
-          <img src="./images/zzz.png" alt="sylized ZZZ" width="30" height="24" class="d-inline-block align-text-top">
-          Better Sleep
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">
-                <img src="./images/profile.svg" alt="profile picture" width="30" height="24"
-                  class="d-inline-block align-text-top">
-                Profile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="settings.html">
-                <img src="./images/settings.svg" alt="gears icon" width="30" height="24"
-                  class="d-inline-block align-text-top">
-                Settings
-              </a>
-            </li>
-          </ul>
-        </div>
+  <!------------------------------>
+  <!-- Your HTML Layout go here -->
+  <!------------------------------>
+  <!-- Stuff for body goes here -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #3943B7;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./main.html">
+        <img src="./images/zzz.png" alt="sylized ZZZ" width="30" height="24" class="d-inline-block align-text-top">
+        Better Sleep
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">
+              <img src="./images/profile.svg" alt="profile picture" width="30" height="24"
+                class="d-inline-block align-text-top">
+              Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">
+              <img src="./images/settings.svg" alt="gears icon" width="30" height="24"
+                class="d-inline-block align-text-top">
+              Settings
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-      
-      <!-- PUT STUFF HERE -->
-      <h1>Survey</h1>
 
-      <!-- HTML for Question 1 of the survey -->
-      <div class="start-survey">
+  <!-- PUT STUFF HERE -->
+  <h1>Survey</h1>
+
+  <!-- HTML for Question 1 of the survey -->
+  <form id="surveyForm">
+    <div class="survey">
+      <div class="start-survey" id="question1">
         <p>1. Question 1</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="A" name="q1" value="A" />
-            <label for="A">A</label>
+            <input type="radio" id="q1A" name="q1" value="A" />
+            <label for="q1A">A</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="B" name="q1" value="B" />
-            <label for="B">B</label>
+            <input type="radio" id="q1B" name="q1" value="B" />
+            <label for="q1B">B</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="C" name="q1" value="C" />
-            <label for="C">C</label>
+            <input type="radio" id="q1C" name="q1" value="C" />
+            <label for="q1C">C</label>
           </div>
         </div>
       </div>
 
       <!-- HTML for Question 2 of the survey -->
-      <div class="start-survey">
+      <div class="start-survey" id="question2">
         <p>2. Question 2</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="A" name="q2" value="A" />
-            <label for="A">A</label>
+            <input type="radio" id="q2A" name="q2" value="A" />
+            <label for="q2A">A</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="B" name="q2" value="B" />
-            <label for="B">B</label>
+            <input type="radio" id="q2B" name="q2" value="B" />
+            <label for="q2B">B</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="C" name="q2" value="C" />
-            <label for="C">C</label>
+            <input type="radio" id="q2C" name="q2" value="C" />
+            <label for="q2C">C</label>
           </div>
         </div>
       </div>
-
       <!-- HTML for Question 3 of the survey -->
-      <div class="start-survey">
+      <div class="start-survey" id="question3">
         <p>3. Question 3</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="A" name="q3" value="A" />
-            <label for="A">A</label>
+            <input type="radio" id="q3A" name="q3" value="A" />
+            <label for="q3A">A</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="B" name="q3" value="B" />
-            <label for="B">B</label>
+            <input type="radio" id="q3B" name="q3" value="B" />
+            <label for="q3B">B</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="C" name="q3" value="C" />
-            <label for="C">C</label>
+            <input type="radio" id="q3C" name="q3" value="C" />
+            <label for="q3C">C</label>
           </div>
         </div>
       </div>
-
-      <!-- HTML for Question 4 of the survey -->
-      <div class="start-survey">
+      <div class="start-survey" id="question4">
         <p>4. Question 4</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="A" name="q4" value="A" />
-            <label for="A">A</label>
+            <input type="radio" id="q4A" name="q4" value="A" />
+            <label for="q2A">A</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="B" name="q4" value="B" />
-            <label for="B">B</label>
+            <input type="radio" id="q4B" name="q4" value="B" />
+            <label for="q4B">B</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="C" name="q4" value="C" />
-            <label for="C">C</label>
+            <input type="radio" id="q4C" name="q4" value="C" />
+            <label for="q4C">C</label>
           </div>
         </div>
       </div>
-
-      <!-- HTML for Question 5 of the survey -->
-      <div class="start-survey" id="start-survey-last-question">
+      <!-- HTML for Question 3 of the survey -->
+      <div class="start-survey" id="question5">
         <p>5. Question 5</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="A" name="q5" value="A" />
-            <label for="A">A</label>
+            <input type="radio" id="q5A" name="q5" value="A" />
+            <label for="q5A">A</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="B" name="q5" value="B" />
-            <label for="B">B</label>
+            <input type="radio" id="q5B" name="q5" value="B" />
+            <label for="q5B">B</label>
           </div>
-        
+
           <div>
-            <input type="radio" id="C" name="q5" value="C" />
-            <label for="C">C</label>
+            <input type="radio" id="q5C" name="q5" value="C" />
+            <label for="q5C">C</label>
           </div>
         </div>
+        <button type="submit">Submit</button>
       </div>
-      
+</form>
 
-      <!-- FOOTER -->
-      <div class="container my-5">
-        <footer class="fixed-bottom" style="background-color: #67AAF9;" >
-          <div class="container d-flex justify-content-center py-5">
-            <a class="nav-link active" aria-current="page" href="main.html">
-              <img src="./images/home.svg" alt="house" width="30" height="24" class="d-inline-block align-text-top">
-              Home
-            </a>
-            <a class="nav-link" href="schedule.html">
-              <img src="./images/schedule.svg" alt="calendar with clock" width="30" height="24"
-                class="d-inline-block align-text-top">
-              Schedule
-            </a>
-            <a class="nav-link" href="progress.html">
-              <img src="./images/progress.svg" alt="chart going up" width="30" height="24"
-                class="d-inline-block align-text-top">
-              Progress
-            </a>
-            <a class="nav-link" href="meditation.html">
-              <img src="./images/yinyang.svg" alt="yin yang" width="30" height="24" class="d-inline-block align-text-top">
-              Meditation
-            </a>
-          </div>
-      
-          <!-- Copyright -->
-          <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-          </div>
-          <!-- Copyright -->
-        </footer>
-        
+  <!-- FOOTER -->
+
+  <div class="container my-5">
+    <footer class="fixed-bottom" style="background-color: #67AAF9;">
+      <div class="container d-flex justify-content-center py-5">
+        <a class="nav-link active" aria-current="page" href="main.html">
+          <img src="./images/home.svg" alt="house" width="30" height="24" class="d-inline-block align-text-top">
+          Home
+        </a>
+        <a class="nav-link" href="schedule.html">
+          <img src="./images/schedule.svg" alt="calendar with clock" width="30" height="24"
+            class="d-inline-block align-text-top">
+          Schedule
+        </a>
+        <a class="nav-link" href="progress.html">
+          <img src="./images/progress.svg" alt="chart going up" width="30" height="24"
+            class="d-inline-block align-text-top">
+          Progress
+        </a>
+        <a class="nav-link" href="meditation.html">
+          <img src="./images/yinyang.svg" alt="yin yang" width="30" height="24" class="d-inline-block align-text-top">
+          Meditation
+        </a>
       </div>
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+      <!-- Copyright -->
+      <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/firebaseAPI_BBY30.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+  </div>
+  <!---------------------------------------------->
+  <!-- Your own JavaScript functions go here    -->
+  <!---------------------------------------------->
+
+  <!-- Link to scripts of your own -->
+  <script src="./scripts/firebaseAPI_BBY30.js"></script>
+  <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
 
