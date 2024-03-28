@@ -72,3 +72,79 @@ h1 {
 #start-survey-last-question {
     padding-bottom: 20%;
 }
+
+
+/* Body styles */
+#meditation-body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding-bottom: 50px; /* Add some padding to accommodate the footer */
+}
+
+/* Heading styles */
+#meditation-heading {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+}
+
+/* Tips for Meditating section styles */
+#meditation-tips {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#meditation-tips h3 {
+    color: #333;
+}
+
+#meditation-tips ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#meditation-tips li {
+    margin-bottom: 10px;
+}
+
+/* Meditation videos section styles */
+#meditation-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#meditation-videos iframe {
+    margin: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #67AAF9;
+    color: #fff;
+    text-align: center;
+    padding: 0px; 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.container-2 {
+    margin: 0 10%;
+    
+}
+
