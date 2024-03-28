@@ -69,6 +69,17 @@ h1 {
     height: 650pt;;
 }
 
+#scheduleDiv {
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #333;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .start-survey-buttons {
     padding-left: 5%;
     padding-bottom: 2%;
