@@ -24,7 +24,7 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
       // Push data to Firestore
       firebase.firestore()
       .collection('users')
-      .doc(userId).set(answers).then(function() {
+      .doc(userId).update(answers).then(function() {
           // Clear form after successful submission
           
           document.getElementById('surveyForm').reset();
