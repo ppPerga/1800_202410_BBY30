@@ -18,16 +18,15 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
         q3: getSelectedOption('question3'),
         q4: getSelectedOption('question4'),
         q5: getSelectedOption('question5'),
-        // Add similar lines for questions 4 and 5
       };
       console.log(answers);
 
       // Push data to Firestore
-      firestore.collection('users').doc(userId).update(answers)
-        .then(function() {
+      firebase.firestore()
+      .collection('users')
+      .doc(userId).set(answers).then(function() {
           // Clear form after successful submission
           document.getElementById('surveyForm').reset();
-          alert("Thank you for your feedback!");
         }).catch(function(error) {
           console.error("Error submitting form:", error);
           alert("An error occurred. Please try again later.");

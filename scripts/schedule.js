@@ -8,15 +8,18 @@ async function loadResultsAndUpdateHTML(userId) {
             .then((docSnapshot) => {
                 if (docSnapshot.exists) {
                     const answers = docSnapshot.data();
-                    console.log("answers:", answers);
-
+ 
                     if (answers.q1 != null) {
                         var bedtime = answers.q2-answers.q1;
-                        if ((answers.q2 - answers.q1) >= 0) {
+                        console.log(bedtime);
+                        if (bedtime <= 0) {
                             bedtime+=24;
                         }
+                        if (bedtime < 10){
+                            bedtime = "0"+bedtime;
+                        }
                         document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting " + answers.q1
-                            + ":00 hours of sleep by going to bed at " + bedtime + ":00 and take 30 mins - 1 hour before and after sleeping" 
+                            + ":00 hours of sleep by going to bed at " + bedtime + ":00 and take 30 mins to 1 hour before and after sleeping" 
                             "for routines"; 
                     } else {
                         document.getElementById('scheduleDiv').innerHTML = "Survey not taken, no schedule";
