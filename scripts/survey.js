@@ -26,7 +26,10 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
       .collection('users')
       .doc(userId).set(answers).then(function() {
           // Clear form after successful submission
+          
           document.getElementById('surveyForm').reset();
+          window.location.href = '/schedule.html';
+
         }).catch(function(error) {
           console.error("Error submitting form:", error);
           alert("An error occurred. Please try again later.");
@@ -66,11 +69,3 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
         return null;
     }
 }
-
-const page2Button = document.getElementById('page2Button');
-
-// Add a click event listener to the button
-page2Button.addEventListener('click', () => {
-    // Navigate to Page 2 when the button is clicked
-    window.location.href = '/schedule.html';
-});
