@@ -3,6 +3,10 @@ h1 {
     text-align: center;
 }
 
+.scroll {
+    overflow-y:auto;
+}
+
 .better-sleep {
     margin-left: 5px;
     color: white;
@@ -62,6 +66,7 @@ h1 {
 .survey {
     padding: 5%;
     height:10%;
+    height: 650pt;;
 }
 
 .start-survey-buttons {
@@ -71,6 +76,8 @@ h1 {
 
 #start-survey-last-question {
     padding-bottom: 20%;
+    padding-left: 2%;
+    padding-bottom: 40%;
 }
 
 
@@ -147,4 +154,5 @@ footer a:hover {
     margin: 0 10%;
     
 }
+
 

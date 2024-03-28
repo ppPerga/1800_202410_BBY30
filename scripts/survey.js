@@ -14,13 +14,14 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
       // Get answers for questions 1 to 5
       var answers = {
         q1: getSelectedOption('question1'),
-        q2: getSelectedOption('question2'),
+        q2: getEnteredNumber('q2'),
         q3: getSelectedOption('question3'),
         q4: getSelectedOption('question4'),
         q5: getSelectedOption('question5'),
         // Add similar lines for questions 4 and 5
       };
-  
+      console.log(answers);
+
       // Push data to Firestore
       firestore.collection('users').doc(userId).collection('answers').doc('answersData').set(answers)
         .then(function() {
@@ -49,3 +50,20 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     return null; // If no option is selected
   }
   
+  function getEnteredNumber(questionId) {
+    // Get the input element associated with the question ID
+
+    var inputElement = document.getElementById(questionId + "Input");
+    console.log(inputElement);
+    // Check if the input element exists
+    if (inputElement) {
+        // Retrieve the entered number from the input element
+        var enteredNumber = inputElement.value;
+
+        // Return the entered number
+        return enteredNumber;
+    } else {
+        // Return null if the input element doesn't exist
+        return null;
+    }
+}

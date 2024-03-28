@@ -75,46 +75,33 @@
   <h1>Survey</h1>
 
   <!-- HTML for Question 1 of the survey -->
-  <form id="surveyForm">
+  <form id="surveyForm" class="scroll">
     <div class="survey">
       <div class="start-survey" id="question1">
-        <p>1. Question 1</p>
+        <p>1. Age</p>
         <div class="start-survey-buttons">
           <div>
-            <input type="radio" id="q1A" name="q1" value="A" />
-            <label for="q1A">A</label>
+            <input type="radio" id="q1A" name="q1" value="9" />
+            <label for="q1A">12-17</label>
           </div>
 
           <div>
-            <input type="radio" id="q1B" name="q1" value="B" />
-            <label for="q1B">B</label>
+            <input type="radio" id="q1B" name="q1" value="8" />
+            <label for="q1B">18-24</label>
           </div>
 
           <div>
-            <input type="radio" id="q1C" name="q1" value="C" />
-            <label for="q1C">C</label>
+            <input type="radio" id="q1C" name="q1" value="7" />
+            <label for="q1C">25+</label>
           </div>
         </div>
       </div>
 
       <!-- HTML for Question 2 of the survey -->
       <div class="start-survey" id="question2">
-        <p>2. Question 2</p>
+        <p>2. Wake up time</p>
         <div class="start-survey-buttons">
-          <div>
-            <input type="radio" id="q2A" name="q2" value="A" />
-            <label for="q2A">A</label>
-          </div>
-
-          <div>
-            <input type="radio" id="q2B" name="q2" value="B" />
-            <label for="q2B">B</label>
-          </div>
-
-          <div>
-            <input type="radio" id="q2C" name="q2" value="C" />
-            <label for="q2C">C</label>
-          </div>
+          <input type="number" id="q2Input" name="q2" />
         </div>
       </div>
       <!-- HTML for Question 3 of the survey -->
@@ -177,7 +164,7 @@
         </div>
         <button type="submit">Submit</button>
       </div>
-</form>
+  </form>
 
   <!-- FOOTER -->
 
