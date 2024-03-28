@@ -67,3 +67,11 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
         return null;
     }
 }
+
+const page2Button = document.getElementById('page2Button');
+
+// Add a click event listener to the button
+page2Button.addEventListener('click', () => {
+    // Navigate to Page 2 when the button is clicked
+    window.location.href = '/schedule.html';
+});
