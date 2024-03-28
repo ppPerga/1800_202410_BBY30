@@ -9,6 +9,10 @@ function sayHello() {
 //     window.location.href = "login.html";
 // });
 
+function loginbutton() {
+  window.location.href = "login.html";
+}
+
 //------------------------------------------------
 // Call this function when the "logout" button is clicked
 //-------------------------------------------------
