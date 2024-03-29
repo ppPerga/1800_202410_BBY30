@@ -1,3 +1,5 @@
+var answers = [];
+
 var question1 = `
 <div class="survey">
 <div class="start-survey" id="question2">
@@ -5,9 +7,8 @@ var question1 = `
   <div class="start-survey-buttons">
     <input type="number" id="q2Input" name="q2" />
   </div>
-  <button id="nextButton">Next</button>
-
-</div>
+  <button type="button" id="nextButton">NEXT</button>
+  </div>
 </div>`;
 
 var question2 = `
@@ -17,7 +18,7 @@ var question2 = `
   <div class="start-survey-buttons">
     <input type="number" id="q3Input" name="q3" />
   </div>
-  <button id="nextButton">Next</button>
+  <button type="button" id="nextButton">NEXT</button>
   </div>
 </div>`;
 
@@ -36,7 +37,7 @@ var question3 = `
       <label for="q4B">No</label>
     </div>
   </div>
-  <button id="nextButton">Next  </button>
+  <button type="button" id="nextButton">NEXT</button>
   </div>
 </div>`;
 
@@ -68,6 +69,7 @@ var questions = [question1, question2, question3, question4];
 
 var currentIndex = 0;
 
+// Function to update the form text
 function updateFormText() {
   // Get the div element
   var div = document.getElementById("surveyDiv");
@@ -81,12 +83,50 @@ function updateFormText() {
   // Add the HTML snippet to the div
   div.innerHTML = currentHtml;
 
-  // Do not increment the index to keep displaying the current question
+  // Increment the index for the next question
+  console.log(answers);
+  currentIndex++;
+  attachNextButtonListener();
+  storeAnswer();
 }
 
-// Add event listener to the next button
-var nextButton = document.getElementById("nextButton");
-nextButton.addEventListener("click", updateFormText);
+// Function to store answer for the current question
+function storeAnswer() {
+  var currentAnswer;
+
+  // Determine the type of input for the current question
+  switch (currentIndex) {
+    case 1: // Radio input for question 1
+      currentAnswer = getSelectedOption('question1');
+      break;
+    case 2: // Number input for question 2
+      currentAnswer = document.getElementById('q2Input');
+      break;
+    case 3: // Number input for question 3
+      currentAnswer = document.getElementById('q3Input');
+      break;
+    case 4: // Radio input for question 4
+      currentAnswer = getSelectedOption('question4');
+      break;
+    case 5: // Radio input for question 5
+      currentAnswer = getSelectedOption('question5');
+      break;
+  }
+
+  // Store the current answer in the answers array
+  answers[currentIndex - 1] = currentAnswer;
+}
+
+// Function to attach event listener to the NEXT button
+function attachNextButtonListener() {
+  var nextButton = document.getElementById("nextButton");
+  if (nextButton) {
+    nextButton.addEventListener("click", updateFormText);
+  }
+}
+
+// Call the function to attach event listener to the NEXT button initially
+attachNextButtonListener();
 
 // Function to handle form submission
 
@@ -103,13 +143,7 @@ document.addEventListener('submit', function(event) {
       var userId = user.uid;
 
       // Get answers for questions 1 to 5
-      var answers = {
-        q1: getSelectedOption('question1'),
-        q2: getEnteredNumber('q2Input'),
-        q3: getEnteredNumber('q3Input'),
-        q4: getSelectedOption('question4'),
-        q5: getSelectedOption('question5')
-      };
+
       console.log(answers);
 
       // Push data to Firestore
