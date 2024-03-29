@@ -46,11 +46,12 @@ setTimeout(function() {
 }
 
 
-document.getElementById('logout').addEventListener('click', function() {
-  handleLogout();
-});
+// document.getElementById('logout').addEventListener('click', function() {
+//   handleLogout();
+// });
 
 document.getElementById('logout-setting').addEventListener('click', function() {
+  console.log("Error");
   handleLogout();
 });
 
