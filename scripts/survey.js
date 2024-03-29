@@ -15,7 +15,7 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
       var answers = {
         q1: getSelectedOption('question1'),
         q2: getEnteredNumber('q2'),
-        q3: getSelectedOption('question3'),
+        q3: getEnteredNumber('q3'),
         q4: getSelectedOption('question4'),
         q5: getSelectedOption('question5'),
       };
