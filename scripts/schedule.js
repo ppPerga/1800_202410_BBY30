@@ -22,22 +22,21 @@ async function loadResultsAndUpdateHTML(userId) {
                         }
                             if(sleepTime < answers.q1) {
                                 str = "You didnt sleep as much as the minimum recomended amount. We suggest getting " + answers.q1 
-                                + "-" + (answers.q1-(-2)) + " hours of sleep per night.";
+                                + ":00 -" + (answers.q1-(-2)) + ":00 hours of sleep per night.";
                             } else if (sleepTime > answers.q1-(-2)) {
                                 str = "You slept more than the upper bound reccomended for people your age. We suggest getting " 
-                                + answers.q1 + "-" + (answers.q1-(-2)) + " hours of sleep per night.";
+                                + answers.q1 + ":00 -" + (answers.q1-(-2)) + ":00 hours of sleep per night.";
                             } else {
-                                str = "You slept a healthy amount for people your age, between " + answers.q1 + "-" 
-                                + (answers.q1-(-2)) +". Keep it up!";
+                                str = "You slept a healthy amount for people your age, between " + answers.q1 + ":00 -" 
+                                + (answers.q1-(-2)) +":00. Keep it up!";
                             }
-
-                            if (answers.q4 = "yes") {
+                            if (answers.q4 != "no") {
                                 str += "<br> Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
                             } else {
                                 str += "<br> Caffiene can stay in your system for upwards of 16 hours. Avoid drinking it outside of your morning routine"
                             }
 
-                        document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting " + answers.q1
+                        document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting at least " + answers.q1
                             + ":00 hours of sleep by going to bed at " + bedtime 
                             + ":00 and take 30 mins to 1 hour before and after sleeping for routines. <br>" + str + ""; 
                     } else {

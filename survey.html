@@ -82,38 +82,7 @@
   <h1>Survey</h1>
 
   <form id="surveyForm">
-    <div id="surveyDiv">
-      <div class="survey">
-        <div class="start-survey" id="question1">
-          <p>1. How old are you?</p>
-          <div class="start-survey-buttons">
-            <div>
-              <input type="radio" id="q1A" name="q1" value="10" />
-              <label for="q1A">3-5</label>
-            </div>
-      
-            <div>
-              <input type="radio" id="q1B" name="q1" value="9" />
-              <label for="q1B">6-12</label>
-            </div>
-      
-            <div>
-              <input type="radio" id="q1C" name="q1" value="8" />
-              <label for="q1C">13-18</label>
-            </div>
-            <div>
-              <input type="radio" id="q1D" name="q1" value="7" />
-              <label for="q1D">19+</label>
-            </div>
-            <button id="nextButton">NEXT</button>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- <div class="survey">
+    <div class="survey">
       <div class="start-survey" id="question1">
         <p>1. How old are you?</p>
         <div class="start-survey-buttons">
@@ -135,24 +104,22 @@
             <input type="radio" id="q1D" name="q1" value="7" />
             <label for="q1D">19+</label>
           </div>
-
-
         </div>
       </div>
 
-      <div class="start-survey" id="question2">
+      <div hidden class="start-survey" id="question2">
         <p>2. What time do you need to wake up during weekdays</p>
         <div class="start-survey-buttons">
           <input type="number" id="q2Input" name="q2" />
         </div>
       </div>
-      <div class="start-survey" id="question3">
+      <div hidden class="start-survey" id="question3">
         <p>3. What time you go to sleep</p>
         <div class="start-survey-buttons">
           <input type="number" id="q3Input" name="q3" />
         </div>
       </div>
-      <div class="start-survey" id="question4">
+      <div hidden class="start-survey" id="question4">
         <p>4. Do you consume Caffiene 8 hours or less before you sleep</p>
         <div class="start-survey-buttons">
           <div>
@@ -166,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="start-survey" id="question5">
+      <div hidden class="start-survey" id="question5">
         <p>5. Are you male or female</p>
         <div class="start-survey-buttons">
           <div>
@@ -184,8 +151,10 @@
             <label for="q5B">Prefer not to answer</label>
           </div>
         </div>
-        <button type="submit" class="survey-button" id="page2Button">Submit</button>
-      </div> -->
+        
+      </div>
+      <button id="nextButton">Next</button>
+
   </form>
   <br><br><br><br><br><br><br><br>
 
@@ -199,6 +168,7 @@
   <!---------------------------------------------->
 
   <!-- Link to scripts of your own -->
+  
   <script src="./scripts/firebaseAPI_BBY30.js"></script>
   <!-- <script src="./scripts/script.js"></script> -->
 
