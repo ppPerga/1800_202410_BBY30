@@ -14,10 +14,7 @@ async function loadResultsAndUpdateHTML(userId) {
                         if (bedtime <= 0) {
                             bedtime+=24;
                         }
-                        if (bedtime < 10){
-                            bedtime = "0"+bedtime;
-                        }
-     
+
                         var str;
                         sleepTime = answers.q2 - answers.q3;
                         if(sleepTime < 0){
@@ -30,7 +27,8 @@ async function loadResultsAndUpdateHTML(userId) {
                                 str = "You slept more than the upper bound reccomended for people your age. We suggest getting " 
                                 + answers.q1 + "-" + (answers.q1-(-2)) + " hours of sleep per night.";
                             } else {
-                                str = "You slept a healthy amount for people your age. Keep it up!";
+                                str = "You slept a healthy amount for people your age, between " + answers.q1 + "-" 
+                                + (answers.q1-(-2)) +". Keep it up!";
                             }
 
                         document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting " + answers.q1
