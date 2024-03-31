@@ -186,3 +186,37 @@ applyDarkMode();
 // }.then(window.location.href = "login.html"));
 // Logout function
 
+//alternate to meditation page, how are you doing form
+function showAlert(image) {
+  switch (image) {
+    case 'very_happy':
+      alert('That is great news! We recommend taking this time to build some good habits like meditating.');
+      break;
+    case 'moderate':
+      alert('That is ok! We recommend taking some time to meditate and reflect on how you could improve your mood.');
+      break;
+      case 'very_bad':
+      alert('We are sorry you feel this way. We recommend taking some time to meditate and reflect on what is causing you to feel this way.');
+      break;
+    default:
+      alert('Unknown image clicked!');
+  }
+}
+
+// document.querySelectorAll('.clickable').forEach(function(img) {
+//   img.addEventListener('click', function(event) {
+//     event.preventDefault(); // Prevent default form submission behavior
+//     var altText = this.alt; // Get the alt attribute of the clicked image
+//     switch (altText) {
+//       case 'very_happy':
+//         alert('You clicked Image 1!');
+//         break;
+//       case 'Image 2':
+//         alert('You clicked Image 2!');
+//         break;
+//       // Add more cases for additional images
+//       default:
+//         alert('Unknown image clicked!');
+//     }
+//   });
+// });
