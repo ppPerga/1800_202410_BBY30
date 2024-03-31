@@ -3,19 +3,28 @@ let nextButtonClickCount = 0;
 const questions = document.querySelectorAll('.start-survey');
 const nextButton = document.getElementById('nextButton');
 const submitButton = document.getElementById('submitButton');
+const backButton = document.getElementById('backButton');
 
+
+backButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    nextButtonClickCount--;
+    if (nextButtonClickCount < 5) {
+        showLastQuestion();
+    } else if (nextButtonClickCount === 0) {
+    }
+});
 
 nextButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     // Check if the current question has a valid answer before proceeding
     if (!isValidAnswer()) {
-        // If the answer is not valid, alert the user or handle it as appropriate
         alert("Please select an answer before proceeding.");
-        return; // Exit the function without proceeding further
+        return;
     }
 
-    // If the answer is valid, increment nextButtonClickCount and show the next question
     nextButtonClickCount++;
     if (nextButtonClickCount < 5) {
         showNextQuestion();
@@ -63,9 +72,6 @@ function showNextQuestion() {
       if(nextButtonClickCount === 4) {
         nextButton.innerHTML = "Submit";
       }
-
-
-
   } else {
       // Reset the index and submit answers after the fifth click
       currentQuestionIndex = 0;
@@ -74,6 +80,24 @@ function showNextQuestion() {
       }
   }
 }
+
+function showLastQuestion() {
+    // Hide all questions
+    questions.forEach(question => {
+        question.setAttribute('hidden', true);
+    });
+  
+    // Increment currentQuestionIndex
+    currentQuestionIndex--;
+  
+    // Show the next question
+    if (currentQuestionIndex < questions.length) {
+        questions[currentQuestionIndex].removeAttribute('hidden');
+        if(nextButtonClickCount < 4) {
+          nextButton.innerHTML = "Next";
+        }
+    }
+  }
 
 function submitAnswers() {
     // Get the current user

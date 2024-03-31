@@ -71,6 +71,22 @@ a:hover {
     color: white;
 }
 
+#backButton {
+    padding: 10px 10px;
+    font-size: 18px;
+    color:black;
+    background-color: #BE95C4;
+    border-radius: 10px;
+    border-color: #E0B1CB;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#backButton:hover {
+    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    color: white;
+}
+
 .schedule {
     background-color: #AAA1C8;
 }
@@ -329,8 +345,6 @@ footer a:hover {
   a:focus {
     color: #E0B1CB;
   }
-
-
 
 /* Basic styling for survey questions */
 .start-survey {
