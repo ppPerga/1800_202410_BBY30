@@ -78,11 +78,9 @@
       <div id="mood-section">
         <h3 id="mood-question">How are you feeling right now?</h3>
         <div class="mood-buttons">
-          <form action="submit_action.html" method="post">
-            <input type="image" src="images/very happy.png" alt="Submit" width="50" height="50">
-            <input type="image" src="images/moderate.png" alt="Submit" width="50" height="50">
-            <input type="image" src="images/very bad.png" alt="Submit" width="50" height="50">
-          </form>
+          <input type="image" src="images/very happy.png" alt="very_happy" id="very_happy" width="50" height="50" onclick="showAlert('very_happy')">
+          <input type="image" src="images/moderate.png" alt="moderate" id="moderate" onclick="showAlert('moderate')" width="50" height="50">
+          <input type="image" src="images/very bad.png" alt="very_bad" id="very_bad" onclick="showAlert('very_bad')" width="50" height="50">
         </div>
       </div>
       <!-- Meditation videos section -->
@@ -154,6 +152,7 @@
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_BBY30.js"></script>
     <script src="./scripts/client.js"></script>
+    <script src="./scripts/script.js"></script>
 
   </body>
 
