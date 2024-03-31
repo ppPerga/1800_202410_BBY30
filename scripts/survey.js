@@ -2,10 +2,20 @@ let currentQuestionIndex = 0;
 let nextButtonClickCount = 0;
 const questions = document.querySelectorAll('.start-survey');
 const nextButton = document.getElementById('nextButton');
+const submitButton = document.getElementById('submitButton');
+
 
 nextButton.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default form submission
 
+    // Check if the current question has a valid answer before proceeding
+    if (!isValidAnswer()) {
+        // If the answer is not valid, alert the user or handle it as appropriate
+        alert("Please select an answer before proceeding.");
+        return; // Exit the function without proceeding further
+    }
+
+    // If the answer is valid, increment nextButtonClickCount and show the next question
     nextButtonClickCount++;
     if (nextButtonClickCount < 5) {
         showNextQuestion();
@@ -14,6 +24,29 @@ nextButton.addEventListener('click', function(event) {
         nextButtonClickCount = 0;
     }
 });
+
+// Function to check if the current question has a valid answer
+function isValidAnswer() {
+    // Check if the current question is a radio button group or a text input
+    var currentQuestion = document.getElementById('question' + (nextButtonClickCount + 1));
+    var radioButtons = currentQuestion.querySelectorAll('input[type="radio"]');
+    var textInput = currentQuestion.querySelector('input[type="number"]');
+    
+    // If the question is a radio button group, check if any button is checked
+    if (radioButtons.length > 0) {
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked) {
+                return true; // At least one radio button is checked
+            }
+        }
+        return false; // No radio button is checked
+    } else if (textInput) { // If the question is a text input, check if it's filled
+        return textInput.value.trim() !== ""; // Check if the input value is not empty
+    } else { // If the question format is unknown, assume it's valid
+        return true;
+    }
+}
+
 
 function showNextQuestion() {
   // Hide all questions
@@ -27,7 +60,12 @@ function showNextQuestion() {
   // Show the next question
   if (currentQuestionIndex < questions.length) {
       questions[currentQuestionIndex].removeAttribute('hidden');
-      
+      if(nextButtonClickCount === 4) {
+        nextButton.innerHTML = "Submit";
+      }
+
+
+
   } else {
       // Reset the index and submit answers after the fifth click
       currentQuestionIndex = 0;
