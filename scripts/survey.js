@@ -95,3 +95,4 @@ function getEnteredNumber(questionId) {
         return null;
     }
 }
+

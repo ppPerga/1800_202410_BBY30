@@ -28,7 +28,7 @@ async function loadResultsAndUpdateHTML(userId) {
                                 + answers.q1 + ":00 -" + (answers.q1-(-2)) + ":00 hours of sleep per night.";
                             } else {
                                 str = "You slept a healthy amount for people your age, between " + answers.q1 + ":00 -" 
-                                + (answers.q1-(-2)) +":00. Keep it up!";
+                                + (answers.q1-(-2)) +":00 hours. Keep it up!";
                             }
                             if (answers.q4 != "no") {
                                 str += "<br> Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
