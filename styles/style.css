@@ -1,3 +1,87 @@
+body {
+    background-color: #D5C6E0;
+    color:black;
+}
+
+a:hover {
+    color: #E0B1CB;
+}
+
+.navbar {
+    background-color: #5E548E;
+}
+
+.p-4 {
+    background-color: #AAA1C8;
+}
+
+.fixed-bottom {
+    background-color: #5E548E;
+}
+
+.nav-link {
+    color: black;
+}
+
+.btn-info {
+    padding: 10px 10px;
+    font-size: 18px;
+    color:black;
+    background-color: #BE95C4;
+    border-radius: 10px;
+    border-color: #E0B1CB;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    color: white;
+}
+
+.btn-primary {
+    padding: 10px 10px;
+    font-size: 18px;
+    color:black;
+    background-color: #BE95C4;
+    border-radius: 10px;
+    border-color: #E0B1CB;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    color: white;
+}
+
+#nextButton {
+    padding: 10px 10px;
+    font-size: 18px;
+    color:black;
+    background-color: #BE95C4;
+    border-radius: 10px;
+    border-color: #E0B1CB;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nextButton:hover {
+    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    color: white;
+}
+
+.schedule {
+    background-color: #AAA1C8;
+}
+
+.setting-link {
+    border-color: #E0B1CB;
+    box-shadow: #E0B1CB;
+    outline-color: #E0B1CB;
+}
+
+
 h1 {
     font-size: 56px;
     text-align: center;
@@ -39,24 +123,27 @@ h1 {
 .login-button {
     padding: 10px 10px;
     font-size: 18px;
-    color:white;
-    background-color: #000100;
+    color:black;
+    background-color: #BE95C4;
     border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.survey-button {
-    padding: 5px 5px;
-    font-size: 18px;
-    color:white;
-    background-color: #000100;
-    border-radius: 8px;
+    border-color: #E0B1CB;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: 	#5f9ea0; /* Darker green background on hover */
+    background-color: #E0B1CB;
+    color: white;
+}
+
+.survey-button {
+    padding: 5px 5px;
+    font-size: 18px;
+    color:black;
+    background-color: #5E548E;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .start-survey {
@@ -75,10 +162,9 @@ h1 {
     font-family: 'Arial', sans-serif;
     font-size: 10pt;
     line-height: 1.5;
-    color: #333;
     padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
+    background-color: #AAA1C8;
+    border: 1px solid #AAA1C8;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -97,29 +183,24 @@ h1 {
 /* Body styles */
 #meditation-body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
     padding-bottom: 50px; /* Add some padding to accommodate the footer */
 }
 
 /* Heading styles */
 #meditation-heading {
     text-align: center;
-    color: #333;
     margin-top: 50px;
 }
 
 /* Tips for Meditating section styles */
 #meditation-tips {
-    background-color: #fff;
+    background-color: #AAA1C8;
     padding: 20px;
     margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#meditation-tips h3 {
-    color: #333;
-}
 
 #meditation-tips ul {
     list-style-type: none;
@@ -136,10 +217,11 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
+    padding:0%;
 }
 
 #meditation-videos iframe {
-    margin: 10px;
+    margin: 5px;
 }
 
 /* Footer styles */
@@ -168,9 +250,6 @@ footer a:hover {
     
 }
 
-
-
-
 .setting-link-section {
     display: flex;
     flex-direction: column;
@@ -184,8 +263,8 @@ footer a:hover {
     margin-bottom: 20px;
     text-align: center;
     text-decoration: none;
-    color: #333;
-    border: 3px solid #007bff;
+    color: black;
+    border: 3px solid #E0B1CB;
     border-radius: 10px;
     transition: all 0.3s ease;
     font-size: 1.5em;
@@ -195,17 +274,13 @@ footer a:hover {
 }
 
 .setting-link:hover {
-    background-color: #007bff;
+    background-color: #E0B1CB;
     color: #fff;
 }
 
 #setting-h1 {
     font-size:40px;
 }
-
-
-
-
 
 .back-btn {
     /* position: absolute; */
@@ -217,6 +292,40 @@ footer a:hover {
 
 
 .dark-mode {
-    background-color: black;
-    color: white;
+    background-color: #231942;
+    color: #D5C6E0;
+  }
+
+  .nav-link {
+    margin: 0%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+  }
+
+  .youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  #mood-section {
+    margin-top: 5%;
+  }
+
+  #meditation-tips {
+    margin-bottom: 5%;
+  }
+
+  .nav-link:hover {
+    color:  #E0B1CB;
+  }
+
+  a:active {
+    color: #E0B1CB;
+  }
+
+  a:focus {
+    color: #E0B1CB;
   }

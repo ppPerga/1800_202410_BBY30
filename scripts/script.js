@@ -126,11 +126,37 @@ document.getElementById("deleteAccountBtn").addEventListener("click", function()
   });
 })
 
-
-function darkMode() {
+// Function to enable or disable dark mode
+function toggleDarkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");
+  
+  // Check if dark mode is enabled
+  var isDarkModeEnabled = element.classList.contains("dark-mode");
+
+  // Store the user's preference in localStorage
+  localStorage.setItem("darkModeEnabled", isDarkModeEnabled);
 }
+
+// Function to apply dark mode based on user preference
+function applyDarkMode() {
+  // Check if dark mode was enabled before
+  var isDarkModePreviouslyEnabled = localStorage.getItem("darkModeEnabled");
+
+  // Apply dark mode if it was enabled before
+  if (isDarkModePreviouslyEnabled === "true") {
+    toggleDarkMode();
+  }
+}
+
+// Apply dark mode on page load
+applyDarkMode();
+
+
+// function darkMode() {
+//   var element = document.body;
+//   element.classList.toggle("dark-mode");
+// }
 
 
 

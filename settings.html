@@ -35,7 +35,7 @@
     <!------------------------------>
     <!-- Your HTML Layout go here -->
     <!-- Stuff for body goes here -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #3943B7;">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="./main.html">
           <img src="./images/zzz.png" alt="sylized ZZZ" width="30" height="24" class="d-inline-block align-text-top">
@@ -70,16 +70,20 @@
       <div class="setting-link-section">
         <a href="edit-profile.html" class="setting-link">Edit Profile</a>
         <a href="edit-password.html" class="setting-link">Edit Password</a>
-        <a href="#" class="setting-link" onClick="darkMode()">Switch to Dark Mode</a>
+
+        <!-- using <a> to navigate between pages makes it impossible to have dark mode persist
+        between pages -->
+        <!-- <a href="#" class="setting-link" onClick="toggleDarkMode()">Switch to Dark Mode</a> -->
         <a href="#" class="setting-link" id="logout-setting">Log Out</a>
         <a href="#" class="setting-link" id="deleteAccountBtn">Delete Account</a>
-    </div>
+      </div>
+      <br><br><br>
   
 
 
       <!-- FOOTER -->
       <div class="container my-5">
-        <footer class="fixed-bottom" style="background-color: #67AAF9;" >
+        <footer class="fixed-bottom">
           <div class="container d-flex justify-content-center py-5">
             <a class="nav-link active" aria-current="page" href="main.html">
               <img src="./images/home.svg" alt="house" width="30" height="24" class="d-inline-block align-text-top">
@@ -102,10 +106,10 @@
           </div>
       
           <!-- Copyright -->
-          <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <!-- <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2020 Copyright:
             <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-          </div>
+          </div> -->
           <!-- Copyright -->
         </footer>
         
