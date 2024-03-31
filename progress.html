@@ -68,6 +68,26 @@
       <!-- PUT STUFF HERE -->
       <div><h1>Progress</h1></div>
 
+
+      <div class="progress">
+        <form id="progressForm">  
+          <div class="question">
+            <label>How was the quality of your sleep last night?</label><br>
+            <input type="radio" id="qualityGood" name="quality" value="good">
+            <label for="qualityGood">Good</label><br>
+            <input type="radio" id="qualityBad" name="quality" value="bad">
+            <label for="qualityBad">Bad</label><br>
+          </div>
+          <div class="question">
+            <label for="hours">How many hours did you sleep last night?</label><br>
+            <input type="number" id="hours" name="hours" min="0" max="24">
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+
+
       <!-- FOOTER -->
       <div class="container my-5">
         <footer class="fixed-bottom">
@@ -107,6 +127,8 @@
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/firebaseAPI_BBY30.js"></script>
+    <script src="./scripts/progress.js"></script>
+
     <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
