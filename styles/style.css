@@ -394,3 +394,4 @@ footer a:hover {
 .start-survey-buttons input[type="radio"]:checked + label::before {
   background-color: #333;
 }
+
