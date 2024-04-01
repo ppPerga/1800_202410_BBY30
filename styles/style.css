@@ -64,6 +64,7 @@ a:hover {
     border-color: #E0B1CB;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    float: right;
 }
 
 #nextButton:hover {
@@ -393,4 +394,3 @@ footer a:hover {
 .start-survey-buttons input[type="radio"]:checked + label::before {
   background-color: #333;
 }
-

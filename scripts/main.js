@@ -38,23 +38,7 @@ function checkFirestoreForQ1Answer() {
                         if (doc.data().q1) {
                             // "q1" answer exists
                             // Change HTML content accordingly
-                            document.getElementById("mainDiv").innerHTML = `<h2>Hello <span id="name-goes-here"></span></h2>
-                            <p>
-                              Welcome to the sleep app, a simple addition to your daily life
-                              that is sure to improve your sleep.
-                            </p>
-                        
-                            <hr class="my-4" />
-                        
-                            <p>
-                              We see you already took the survey to get started, feel free to take it again to change
-                              your answers.
-                            </p>
-                            <a href="survey.html">
-                              <button type="button" class="btn btn-primary">
-                                Take Survey
-                              </button>
-                            </a>`;
+                            document.getElementById("mainDiv").innerHTML = "";
                             // You can add more HTML manipulation here
                             insertNameFromFirestore();
 

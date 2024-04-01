@@ -5,14 +5,14 @@ const nextButton = document.getElementById('nextButton');
 const submitButton = document.getElementById('submitButton');
 const backButton = document.getElementById('backButton');
 
-
 backButton.addEventListener('click', function(event) {
     event.preventDefault();
-
     nextButtonClickCount--;
-    if (nextButtonClickCount < 5) {
+    if (nextButtonClickCount < 5 || nextButtonClickCount > 0) {
+
         showLastQuestion();
-    } else if (nextButtonClickCount === 0) {
+    } else {
+        nextButtonClickCount ++;
     }
 });
 
