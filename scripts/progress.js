@@ -22,9 +22,8 @@ document.getElementById("progressForm").addEventListener("submit", function(even
     
     // Hide the questions and reset the form
     document.getElementById("progressForm").reset();
-    document.querySelectorAll(".question").forEach(function(question) {
-      question.style.display = "none";
-    });
+    location.reload();
+
   })
   .catch(function(error) {
     console.error("Error adding progress: ", error);
