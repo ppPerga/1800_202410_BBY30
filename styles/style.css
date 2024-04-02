@@ -398,3 +398,17 @@ footer a:hover {
     display: flex;
     justify-content: center;
 }
+
+
+#profile-h1 {
+    font-size: 35pt;
+    margin-bottom: 70%;
+}
+
+.edit-account-form{
+    margin-top: 15px;
+}
+
+.edit-password-form{
+    margin-top: 25px;
+}
