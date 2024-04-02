@@ -39,7 +39,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-// Function to create a line graph using Chart.js
 function createLineGraph(data) {
   var ctx = document.getElementById("progressChart").getContext("2d");
   var progressChart = new Chart(ctx, {
@@ -59,26 +58,32 @@ function createLineGraph(data) {
     },
     options: {
       scales: {
-        xAxes: [{
-          type: "time",
-          time: {
-            unit: "day"
-          },
-          scaleLabel: {
-            display: true,
-            labelString: "Date"
-          }
-        }],
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: "Sleep Duration (hours)"
+        x: {
+          title: {
+              display: true,
+              text: 'date',
           },
           ticks: {
-            beginAtZero: true
+              stepSize: 2,
           }
-        }]
+      },
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        scaleLabel: {
+          display: true,
+          labelString: "Sleep Duration (hours)"
+        },
+        ticks: {
+          beginAtZero: true,
+          callback: function(value, index, values) {
+            return value + "h";
+          }
+        }
       }
     }
-  });
+  }
+});
 }
+
