@@ -213,14 +213,17 @@ h1 {
     background-color: #AAA1C8;
     padding: 20px;
     margin-top: 30px;
+    /* margin-bottom: 20px; */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 120px;
 }
 
 
 #meditation-tips ul {
     list-style-type: none;
     padding-left: 20px;
+
 }
 
 #meditation-tips li {
@@ -397,4 +400,18 @@ footer a:hover {
 #loginButton {
     display: flex;
     justify-content: center;
+}
+
+
+#profile-h1 {
+    font-size: 35pt;
+    margin-bottom: 70%;
+}
+
+.edit-account-form{
+    margin-top: 15px;
+}
+
+.edit-password-form{
+    margin-top: 25px;
 }
