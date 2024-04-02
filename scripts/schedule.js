@@ -33,7 +33,7 @@ async function loadResultsAndUpdateHTML(userId) {
                             if (answers.q4 != "no") {
                                 str += "<br> Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
                             } else {
-                                str += "<br> Caffiene can stay in your system for upwards of 16 hours. Avoid drinking it outside of your morning routine"
+                                str += "<br> "
                             }
 
                         document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting at least " + answers.q1
