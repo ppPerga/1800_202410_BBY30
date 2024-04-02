@@ -17,7 +17,7 @@ async function loadResultsAndUpdateHTML(userId) {
 
                         var str;
                         sleepTime = answers.q2 - answers.q3;
-                        if(sleepTime < 0){
+                        if(sleepTime <= 0){
                             sleepTime += 24;
                         }
                             if(sleepTime < answers.q1) {
