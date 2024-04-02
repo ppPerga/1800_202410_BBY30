@@ -232,7 +232,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
+    margin-bottom: 30px;
     padding:0%;
 }
 
@@ -318,7 +318,7 @@ footer a:hover {
 
   .container {
     display: grid;
-    grid-template-rows: 10% 60% 30%;
+    grid-template-rows: 10% 30% 60%;
   }
 
   .youtube-video {
