@@ -58,14 +58,15 @@ function createLineGraph(data) {
     },
     options: {
       scales: {
-        x: {
-          title: {
-              display: true,
-              text: 'date',
-          },
-          ticks: {
-              stepSize: 2,
-          }
+        x: {  
+          type: 'time', 
+          time: {  
+              unit: 'day'
+          },  
+          title: {  
+              display: true,  
+              text: 'Date'  
+          }  
       },
       y: {
         type: 'linear',
@@ -86,4 +87,3 @@ function createLineGraph(data) {
   }
 });
 }
-
