@@ -19,7 +19,6 @@ function fetchProgressData() {
         console.log(snap);
         if (!snap.empty) {
           createLineGraph(data);
-          console.log("create");
         } else {
         }
       })
