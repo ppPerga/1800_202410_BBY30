@@ -14,7 +14,9 @@ function fetchProgressData() {
           };
           data.push(point);
         });
+        if(db.collection("users").doc(user.uid).collection("progress")){
         createLineGraph(data);
+      }
       })
       .catch(function(error) {
         console.error("Error fetching progress data: ", error);
