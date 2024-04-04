@@ -5,12 +5,19 @@ const nextButton = document.getElementById('nextButton');
 const submitButton = document.getElementById('submitButton');
 const backButton = document.getElementById('backButton');
 
+if(nextButtonClickCount === 0){
+    backButton.setAttribute('hidden', true);
+}
+
+
 
 
 backButton.addEventListener('click', function(event) {
     event.preventDefault();
     nextButtonClickCount--;
-    
+    if(nextButtonClickCount === 0){
+        backButton.setAttribute('hidden', true);
+    } 
     if (nextButtonClickCount < 5 || nextButtonClickCount > 0) {
 
         showLastQuestion();
@@ -27,6 +34,7 @@ nextButton.addEventListener('click', function(event) {
         alert("Please select an answer before proceeding.");
         return;
     }
+    backButton.removeAttribute('hidden');
 
     nextButtonClickCount++;
     if (nextButtonClickCount < 5) {
