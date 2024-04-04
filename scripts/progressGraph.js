@@ -10,7 +10,7 @@ function fetchProgressData() {
           var point = {
             x: doc.data().timestamp.toDate(),
             y: doc.data().hours,
-            color: doc.data().quality === "good" ? "blue" : "red"
+            color: doc.data().quality === "Good" ? "blue" : "red"
           };
           data.push(point);
         });

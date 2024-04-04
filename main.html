@@ -26,6 +26,9 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.js"></script>
 
   <!-- Link to styles of your own -->
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
@@ -78,6 +81,38 @@
   </div>
 
 
+  <canvas id="progressChart"></canvas>
+
+  <form id="progressForm">
+    <div class="survey">
+      <div class="start-survey">
+       <lable for="quality"> How was the quality of your sleep last night?</lable><br>
+        <div class="start-survey-buttons">
+          <div>
+            <input type="radio" id="qualityGood" name="quality" value="Good">
+            <label for="qualityGood">Good</label>
+          </div>
+          <div>
+            <input type="radio" id="qualityBad" name="quality" value="Bad">
+            <label for="qualityBad">Bad</label><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="start-survey">
+        <label for="hours">How many hours did you sleep last night?</label><br>
+        <div class="start-survey-buttons">
+        <input type="number" id="hours" name="hours" min="0" max="24">
+      </div>
+    </div>
+      <button class="nextButton" id="nextButton" type="submit">Submit</button>
+
+    </div>
+  </form>
+
+  <button id="updateButton" type="update">Change answers</button>
+
+
   <!-- FOOTER -->
   <div class="container my-5">
     <footer class="fixed-bottom">
@@ -91,7 +126,7 @@
             class="d-inline-block align-text-top">
           Schedule
         </a>
-        <a class="nav-link" href="progress.html">
+        <a class="nav-link" href="update.html">
           <img src="./images/progress.svg" alt="chart going up" width="30" height="24"
             class="d-inline-block align-text-top">
           Progress
@@ -119,6 +154,10 @@
   <script src="./scripts/firebaseAPI_BBY30.js"></script>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/main.js"></script>
+  <script src="./scripts/progress.js"></script>
+  <script src="./scripts/progressGraph.js"></script>
+  <script src="./scripts/hideProgressSurvey.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
