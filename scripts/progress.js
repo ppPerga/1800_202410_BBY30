@@ -1,9 +1,3 @@
-updateButton = document.getElementById("updateButton");
-
-updateButton.addEventListener('click', function(){
-  window.location.href = '/update.html';
-})
-
 document.getElementById("progressForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
