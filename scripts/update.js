@@ -7,8 +7,15 @@ function fetchProgressData() {
         .then(function(querySnapshot) {
           var data = [];
           querySnapshot.forEach(function(doc) {
+            var formattedTime = doc.data().timestamp.toDate().toLocaleString(undefined, {
+              month: 'short',
+              day: '2-digit',
+              year: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+          });      
             var point = {
-              time: doc.data().timestamp.toDate(),
+              time: formattedTime,
               length: doc.data().hours,
               quality: doc.data().quality
             };

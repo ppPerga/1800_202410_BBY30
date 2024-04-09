@@ -14,9 +14,13 @@ function fetchProgressData() {
           };
           data.push(point);
         });
-        if(db.collection("users").doc(user.uid).collection("progress")){
-        createLineGraph(data);
-      }
+
+        const snap = db.collection('users').doc('uid').collection('progress').limit(1).get()
+        console.log(snap);
+        if (!snap.empty) {
+          createLineGraph(data);
+        } else {
+        }
       })
       .catch(function(error) {
         console.error("Error fetching progress data: ", error);
