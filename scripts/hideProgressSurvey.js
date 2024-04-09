@@ -36,7 +36,7 @@ function shouldHideForm() {
   // Function to hide the form for a day
   function hideFormForDay() {
     const now = new Date();
-    const tomorrow = new Date(now.getTime() + (12* 1000));
+    const tomorrow = new Date(now.getTime() + (12 * 60 * 60 * 1000));
     localStorage.setItem('hideFormUntil', tomorrow);
     updateFormVisibility();
   }
