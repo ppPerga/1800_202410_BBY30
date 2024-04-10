@@ -55,7 +55,6 @@ firebase.auth().onAuthStateChanged(function(user) {
         table += "<td>" + point.time + "</td>";
         table += "<td>" + point.length + "</td>";
         table += "<td>" + point.quality + "</td>";
-        table += "<td>" + button + "</td>";
         table += "</tr>";
     });
     table += "</table>";
