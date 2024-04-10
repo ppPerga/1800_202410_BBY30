@@ -3,21 +3,40 @@ body {
     color:black;
 }
 
+/* Head */
+.navbar {
+    background-color: #5390d9;
+}
+
+
+/* For main page */
+
+.p-4 {
+    background-color: #0466c8;git 
+}
+
+.main-body{
+    background-color: #023E7D;
+}
+
+
+
+/* Footer */
+.fixed-bottom {
+    background-color: #5390d9;
+}
+
+
+
+
 a:hover {
     color: #E0B1CB;
 }
 
-.navbar {
-    background-color: #5E548E;
-}
 
-.p-4 {
-    background-color: #AAA1C8;
-}
 
-.fixed-bottom {
-    background-color: #5E548E;
-}
+
+
 
 .nav-link {
     color: black;
@@ -462,6 +481,3 @@ footer a:hover {
     margin-top: 25px;
 }
 
-.main-body{
-    background-color: purple;
-}
