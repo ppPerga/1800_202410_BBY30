@@ -8,37 +8,44 @@ async function loadResultsAndUpdateHTML(userId) {
             .then((docSnapshot) => {
                 if (docSnapshot.exists) {
                     const answers = docSnapshot.data();
- 
+
                     if (answers.q1 != null) {
-                        var bedtime = answers.q2-answers.q1;
+                        var bedtime = answers.q2 - answers.q1;
                         if (bedtime <= 0) {
-                            bedtime+=24;
+                            bedtime += 24;
                         }
 
                         var str;
                         sleepTime = answers.q2 - answers.q3;
-                        if(sleepTime <= 0){
+                        if (sleepTime <= 0) {
                             sleepTime += 24;
                         }
-                            if(sleepTime < answers.q1) {
-                                str = "You didnt sleep as much as the minimum recomended amount. We suggest getting " + answers.q1 
-                                + ":00 -" + (answers.q1-(-2)) + ":00 hours of sleep per night.";
-                            } else if (sleepTime > answers.q1-(-2)) {
-                                str = "You slept more than the upper bound reccomended for people your age. We suggest getting " 
-                                + answers.q1 + ":00 -" + (answers.q1-(-2)) + ":00 hours of sleep per night.";
-                            } else {
-                                str = "You slept a healthy amount for people your age, between " + answers.q1 + ":00 -" 
-                                + (answers.q1-(-2)) +":00 hours. Keep it up!";
-                            }
-                            if (answers.q4 != "no") {
-                                str += "<br> Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
-                            } else {
-                                str += ""
-                            }
+                        if (sleepTime < answers.q1) {
+                            str = "You didnt sleep as much as the minimum recomended amount. We suggest getting " + answers.q1
+                                + ":00 - " + (answers.q1 - (-2)) + ":00 hours of sleep per night. You get "
+                                + (Math.abs(sleepTime - answers.q1)) + ":00 hours less than the minimum reccomended amount.";
+                        } else if (sleepTime > answers.q1 - (-2)) {
+                            str = "You slept more than the upper bound reccomended for people your age. We suggest getting "
+                                + answers.q1 + ":00 - " + (answers.q1 - (-2)) + ":00 hours of sleep per night. You get "
+                                + (sleepTime - (answers.q1 - (-2))) + ":00 hours more than the maximum reccomended amount.";;
+                        } else {
+                            str = "You slept a healthy amount for people your age, between " + answers.q1 + ":00 - "
+                                + (answers.q1 - (-2)) + ":00 hours. Keep it up! You get " + answers.q2 + ":00 hours of sleep, which is right between "
+                                + "the reccomended amounts.";
+                        }
+                        var str2;
+                        if (answers.q4 != "no") {
+                            str2 = " Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
+                        } else {
+                            str2 = ""
+                        }
 
                         document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting at least " + answers.q1
-                            + ":00 hours of sleep by going to bed at " + bedtime 
-                            + ":00 and take 30 mins to 1 hour before and after sleeping for routines. <br>" + str + ""; 
+                            + ":00 hours of sleep by going to bed at " + bedtime
+                            + ":00 and take 30 mins to 1 hour before and after sleeping for routines.";
+                        document.getElementById('scheduleDiv2').innerHTML = str;
+                        document.getElementById('scheduleDiv3').innerHTML = str2;
+
                     } else {
                         document.getElementById('scheduleDiv').innerHTML = "Survey not taken, no schedule";
                     }
@@ -57,7 +64,7 @@ async function loadResultsAndUpdateHTML(userId) {
     }
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         // User is signed in.
         currentUser = db.collection("users").doc(user.uid)
