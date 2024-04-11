@@ -9,9 +9,6 @@ if(nextButtonClickCount === 0){
     backButton.setAttribute('hidden', true);
 }
 
-
-
-
 backButton.addEventListener('click', function(event) {
     event.preventDefault();
     nextButtonClickCount--;
@@ -60,9 +57,10 @@ function isValidAnswer() {
             }
         }
         return false; // No radio button is checked
-    } else if (textInput) { // If the question is a text input, check if it's filled
-        return textInput.value.trim() !== ""; // Check if the input value is not empty
-    } else { // If the question format is unknown, assume it's valid
+    } else if (textInput) { 
+        
+        return textInput.value.trim() !== ""; 
+    } else {
         return true;
     }
 }
