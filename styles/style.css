@@ -68,10 +68,10 @@ div{
 .btn-primary {
     padding: 10px 10px;
     font-size: 18px;
-    color:black;
-    background-color: #BE95C4;
+    color:lightgray;
+    background-color: #001845;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #0353A4;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
