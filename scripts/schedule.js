@@ -14,37 +14,53 @@ async function loadResultsAndUpdateHTML(userId) {
                         if (bedtime <= 0) {
                             bedtime += 24;
                         }
-
+                        var str2;
                         var str;
                         sleepTime = answers.q2 - answers.q3;
                         if (sleepTime <= 0) {
                             sleepTime += 24;
                         }
-                        if (sleepTime < answers.q1) {
-                            str = "You didnt sleep as much as the minimum recomended amount. We suggest getting " + answers.q1
-                                + ":00 - " + (answers.q1 - (-2)) + ":00 hours of sleep per night. You get "
-                                + (Math.abs(sleepTime - answers.q1)) + ":00 hours less than the minimum reccomended amount.";
-                        } else if (sleepTime > answers.q1 - (-2)) {
-                            str = "You slept more than the upper bound reccomended for people your age. We suggest getting "
-                                + answers.q1 + ":00 - " + (answers.q1 - (-2)) + ":00 hours of sleep per night. You get "
-                                + (sleepTime - (answers.q1 - (-2))) + ":00 hours more than the maximum reccomended amount.";;
+                        if(sleepTime < answers.q1){
+                            str = "You don't sleep enough for people your age.<br><br>  <b>You need " + (answers.q1 - sleepTime) + " more hours per night</b><br><br>"
+                            + "We recommend " + answers.q1 + ":00 - " + (answers.q1 - (-1)) + ":00 hours<br>"
+                            + "You get only " + sleepTime + ":00 hours of sleep<br>";
+                        } else if(sleepTime > answers.q1 - (-2)){
+                            str = "You sleep more than the upper bound of people your age.<br><br>  <b>You should sleep " + (sleepTime - answers.q1) + " Less hours per night</b><br><br>"
+                            + "We recommend " + answers.q1 + ":00 - " + (answers.q1 - (-2)) + ":00 hours<br>"
+                            + "You get " + sleepTime + ":00 hours of sleep";;
                         } else {
-                            str = "You slept a healthy amount for people your age, between " + answers.q1 + ":00 - "
-                                + (answers.q1 - (-2)) + ":00 hours. Keep it up! You get " + answers.q2 + ":00 hours of sleep, which is right between "
-                                + "the reccomended amounts.";
+                            str = "You sleep a good amount for people your age<br><br>"
+                            + "We recommend " + answers.q1 + ":00 - " + (answers.q1 - (-2)) + ":00 hours<br>"
+                            + "You get " + sleepTime + ":00 hours of sleep ";
+                            
                         }
-                        var str2;
-                        if (answers.q4 != "no") {
-                            str2 = " Caffiene can stay in your system for upwards of 16 hours. Try to keep this to your morning routine or eliminate it outright";
-                        } else {
-                            str2 = ""
+                        bedtime -=2;
+                        if (bedtime <= 0) {
+                            bedtime += 24;
+                        }
+                        str2 = "<b>Night</b>: <br>" 
+                        + (bedtime) + ":00 : Brush teeth, Shower<br>" + bedtime + ":30 : Meditation<br>";
+                        
+                        bedtime += 1;
+                        if (bedtime >= 24) {
+                            bedtime -= 24;
+                        }
+                        str2 += bedtime + ":00 : Go to bed<br><b>Morning</b>:<br>"
+                        + answers.q2 + ":00 : Wake up, brush teeth, shower<br>" 
+                        + (answers.q2) + ":30 : Eat breakfast<br>"
+                        + (answers.q2-(-1)) +  ":00 Start work";
+
+                        if(answers.q4 = "yes"){
+                            str2 += "<br><br> Caffiene can stay in your system for upwards of 16:00 hours, keep it to your morning" + 
+                            " routine."
                         }
 
-                        document.getElementById('scheduleDiv').innerHTML = "For your age range we reccomend getting at least " + answers.q1
-                            + ":00 hours of sleep by going to bed at " + bedtime
-                            + ":00 and take 30 mins to 1 hour before and after sleeping for routines.";
-                        document.getElementById('scheduleDiv2').innerHTML = str;
-                        document.getElementById('scheduleDiv3').innerHTML = str2;
+                        document.getElementById('scheduleDiv').innerHTML = str;
+
+                        document.getElementById('scheduleDiv2').innerHTML = str2;
+
+
+
 
                     } else {
                         document.getElementById('scheduleDiv').innerHTML = "Survey not taken, no schedule";

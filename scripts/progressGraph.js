@@ -16,7 +16,6 @@ function fetchProgressData() {
         });
 
         const snap = db.collection('users').doc('uid').collection('progress').limit(1).get()
-        console.log(snap);
         if (!snap.empty) {
           createLineGraph(data);
         } else {
