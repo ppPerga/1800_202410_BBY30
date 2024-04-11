@@ -1,18 +1,23 @@
 body {
     background-color: #D5C6E0;
     color:black;
+    font-family: "Bree Serif" ;
 }
+  
 
 /* Head */
 .navbar {
     background-color: #5390d9;
 }
 
+#progressChart {
+    background-color: #5390d9;
+}
 
 /* For main page */
 
 .p-4 {
-    background-color: #0466c8;git 
+    background-color: #0466c8;
 }
 
 .main-body{
@@ -33,7 +38,9 @@ a:hover {
     color: #E0B1CB;
 }
 
-
+div{
+    font-family: "Bree Serif" ;
+}
 
 
 
@@ -220,7 +227,7 @@ h1 {
 }
 
 #scheduleDiv {
-    font-family: 'Arial', sans-serif;
+    font-family: "Bree Serif" ;
     font-size: 15pt;
     line-height: 1.5;
     padding: 20px;
@@ -230,7 +237,7 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 #scheduleDiv2 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Bree Serif" ;
     font-size: 15pt;
     line-height: 1.5;
     padding: 20px;
@@ -240,7 +247,7 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 #scheduleDiv3 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Bree Serif" ;
     font-size: 15pt;
     line-height: 1.5;
     padding: 20px;
@@ -397,7 +404,17 @@ footer a:hover {
   #mood-section {
     margin-top: 5%;
     padding-bottom: 0%;
-  }
+    text-align: center;
+    }
+    .medi-tips{
+        text-align: center;
+    }
+      
+  .mood-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images as needed */
+    }
 
   #meditation-tips {
     margin-bottom: 5%;
