@@ -3,11 +3,15 @@ document.getElementById("progressForm").addEventListener("submit", function(even
 
   // Get user input
   var quality = document.querySelector('input[name="quality"]:checked');
-  var hours = document.getElementById("hours").value;
+  var hours = document.querySelector("#hours").value;
 
   // Validate input
   if (!quality || !hours) {
     alert("Please fill out all fields.");
+    return;
+  }
+  if (hours < 0) {
+    alert("Please enter a non negative number.");
     return;
   }
 

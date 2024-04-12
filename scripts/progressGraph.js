@@ -16,7 +16,6 @@ function fetchProgressData() {
         });
 
         const snap = db.collection('users').doc('uid').collection('progress').limit(1).get()
-        console.log(snap);
         if (!snap.empty) {
           createLineGraph(data);
         } else {
@@ -53,7 +52,7 @@ function createLineGraph(data) {
       datasets: [{
         label: "Sleep Duration",
         data: data,
-        backgroundColor: "transparent",
+        backgroundColor: "lightblue",
         borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 2,
         pointBackgroundColor: function(context) {

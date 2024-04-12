@@ -1,13 +1,18 @@
 body {
-    background-color: #D5C6E0;
+    background-color: #0466c8;
     color:black;
+    font-family: "Bree Serif" ;
 }
+  
 
 /* Head */
 .navbar {
     background-color: #5390d9;
 }
 
+#progressChart {
+    background-color: #5390d9;
+}
 
 /* For main page */
 
@@ -33,7 +38,9 @@ a:hover {
     color: #E0B1CB;
 }
 
-
+div{
+    font-family: "Bree Serif" ;
+}
 
 
 
@@ -54,33 +61,45 @@ a:hover {
 }
 
 .btn-info:hover {
-    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    background-color: #001845; /* Lighter lavender background on hover */
     color: white;
 }
 
 .btn-primary {
     padding: 10px 10px;
     font-size: 18px;
-    color:black;
-    background-color: #BE95C4;
+    color:lightgray;
+    background-color: #001845;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #0353A4;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    background-color: #001845; /* Lighter lavender background on hover */
     color: white;
 }
 
 #nextButton {
     padding: 10px 10px;
     font-size: 18px;
-    color:black;
-    background-color: #BE95C4;
+    color:lightgrey;
+    background-color: #0353A4;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #0353A4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right;
+}
+
+.button {
+    padding: 10px 10px;
+    font-size: 18px;
+    color:lightgrey;
+    background-color: #023E7D;
+    border-radius: 10px;
+    border-color: #0353A4;
     cursor: pointer;
     transition: background-color 0.3s ease;
     float: right;
@@ -89,32 +108,32 @@ a:hover {
 #updateButton {
     padding: 5px 5px;
     font-size: 10px;
-    color:black;
-    background-color: #BE95C4;
+    color:lightgrey;
+    background-color: #023E7D;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #0353A4;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #nextButton:hover {
-    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    background-color: #001845; /* Lighter lavender background on hover */
     color: white;
 }
 
 #backButton {
     padding: 10px 10px;
     font-size: 18px;
-    color:black;
-    background-color: #BE95C4;
+    color:lightgrey;
+    background-color: #023E7D;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #0353A4;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #backButton:hover {
-    background-color: #E0B1CB; /* Lighter lavender background on hover */
+    background-color: #001845; /* Lighter lavender background on hover */
     color: white;
 }
 
@@ -123,9 +142,7 @@ a:hover {
 }
 
 .setting-link {
-    border-color: #E0B1CB;
-    box-shadow: #E0B1CB;
-    outline-color: #E0B1CB;
+    background-color: #023E7D;
 }
 
 
@@ -152,7 +169,7 @@ h1 {
 }
 
 .body-1 {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Bree Serif" ;
 }
 
 .login-please {
@@ -169,16 +186,16 @@ h1 {
 .login-button {
     padding: 10px 10px;
     font-size: 18px;
-    color:black;
-    background-color: #BE95C4;
+    color:#7D8597;
+    background-color: #001845;
     border-radius: 10px;
-    border-color: #E0B1CB;
+    border-color: #023E7D;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #E0B1CB;
+    background-color: #001233;
     color: white;
 }
 
@@ -186,7 +203,7 @@ h1 {
     padding: 5px 5px;
     font-size: 18px;
     color:black;
-    background-color: #5E548E;
+    background-color: #001845;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -207,45 +224,37 @@ h1 {
 }
 
 .sleep-table th {
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: #001233;
+    color: #7D8597;
     font-weight: bold;
     padding: 10px;
     text-align: left;
 }
 
 .sleep-table td {
-    border-bottom: 1px solid #ddd;
+    background-color: #023E7D;
+    color: #979DAC;
+    border-bottom: 1px solid #979DAC;
     padding: 8px;
 }
 
 #scheduleDiv {
-    font-family: 'Arial', sans-serif;
+    font-family: "Bree Serif" ;
     font-size: 15pt;
     line-height: 1.5;
     padding: 20px;
-    background-color: #AAA1C8;
-    border: 1px solid #AAA1C8;
+    background-color: #002855;
+    color:lightgrey;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 #scheduleDiv2 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Bree Serif" ;
     font-size: 15pt;
     line-height: 1.5;
     padding: 20px;
-    background-color: #AAA1C8;
-    border: 1px solid #AAA1C8;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-#scheduleDiv3 {
-    font-family: 'Arial', sans-serif;
-    font-size: 15pt;
-    line-height: 1.5;
-    padding: 20px;
-    background-color: #AAA1C8;
-    border: 1px solid #AAA1C8;
+    background-color: #002855;
+    color:lightgrey;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -275,7 +284,8 @@ h1 {
 
 /* Tips for Meditating section styles */
 #meditation-tips {
-    background-color: #AAA1C8;
+    background-color: #001845;
+    color: #979DAC;
     padding: 20px;
     margin-top: 30px;
     /* margin-bottom: 20px; */
@@ -347,8 +357,8 @@ footer a:hover {
     margin-bottom: 20px;
     text-align: center;
     text-decoration: none;
-    color: black;
-    border: 3px solid #E0B1CB;
+    color: lightgrey;
+    border: 3px solid #001845;
     border-radius: 10px;
     transition: all 0.3s ease;
     font-size: 1.5em;
@@ -358,7 +368,7 @@ footer a:hover {
 }
 
 .setting-link:hover {
-    background-color: #E0B1CB;
+    background-color: #001845;
     color: #fff;
 }
 
@@ -397,22 +407,32 @@ footer a:hover {
   #mood-section {
     margin-top: 5%;
     padding-bottom: 0%;
-  }
+    text-align: center;
+    }
+    .medi-tips{
+        text-align: center;
+    }
+      
+  .mood-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the gap between images as needed */
+    }
 
   #meditation-tips {
     margin-bottom: 5%;
   }
 
   .nav-link:hover {
-    color:  #E0B1CB;
+    color:  #023E7D;
   }
 
   a:active {
-    color: #E0B1CB;
+    color: #023E7D;
   }
 
   a:focus {
-    color: #E0B1CB;
+    color: #023E7D;
   }
 
 /* Basic styling for survey questions */

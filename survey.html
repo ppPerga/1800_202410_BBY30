@@ -28,6 +28,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <script type="module" src="/scripts/survey.js"></script>
   <!-- Link to styles of your own -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./styles/style.css"> -->
   <link rel="stylesheet" href="./styles/style.css">
 
@@ -90,7 +93,7 @@
       <div hidden class="start-survey" id="question2">
         <p>2. What time do you need to wake up</p>
         <div class="start-survey-buttons">
-          <input  type="number" id="q2Input" name="q2" />
+          <input pattern="[0-9]*" type="text" id="q2Input" name="q2" maxlength="2" max="24"/>
         </div>
       </div>
       <div hidden class="start-survey" id="question3">
