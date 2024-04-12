@@ -33,11 +33,21 @@ function checkFirestoreForQ1Answer() {
                 .then(function(doc) {
                     if (doc.exists) {
                         // Check if the document contains a "q1" answer
+                        str = "<b>Tips for before you sleep: </b><br>" 
+                        + "-Keep technology out of bedroom<br>"
+                        + "-Cold room will help you to fall asleep<br>"
+                        + "-meditation before bed helps for better sleep<br><br>"
+                        + "<b>Tips for after you wake up</b><br>"
+                        + "-Wake up at the same time youre waking up every day no matter what<br>"
+                        + "-Rub ice cube on your wrist to trigger the hormones of adrenaline<br>"
+                        + "-Have the sunlight in your room and open the curtains"
                         if (!doc.data().q1) {
                             // "q1" answer exists
                             // Change HTML content accordingly
                             document.getElementById("mainBottom").removeAttribute('hidden');
                             insertNameFromFirestore();
+                        } else{
+                            document.getElementById('tipsDiv').innerHTML = str;
 
                         }
                     } else {
@@ -55,6 +65,4 @@ function checkFirestoreForQ1Answer() {
         }
     });
 }
-
-// Call the function to check Firestore for q1 answer for the currently logged-in user
 checkFirestoreForQ1Answer();
