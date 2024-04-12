@@ -39,13 +39,13 @@ async function loadResultsAndUpdateHTML(userId) {
                             bedtime += 24;
                         }
                         str2 = "<b>Night Time Scheduale</b>: <br>" 
-                        + (bedtime) + ":00 : Brush teeth, Shower<br>" + bedtime + ":30 : Meditation<br><br>";
+                        + (bedtime) + ":00 : Brush teeth, Shower<br>" + bedtime + ":30 : Meditation<br>";
                         
                         bedtime += 1;
                         if (bedtime >= 24) {
                             bedtime -= 24;
                         }
-                        str2 += bedtime + ":00 : Go to bed<br><b>Morning Scheduale</b>:<br>"
+                        str2 += bedtime + ":00 : Go to bed<br><br><b>Morning Scheduale</b>:<br>"
                         + answers.q2 + ":00 : Wake up, brush teeth, shower<br>" 
                         + (answers.q2) + ":30 : Eat breakfast<br>"
                         + (answers.q2-(-1)) +  ":00 Start work";
