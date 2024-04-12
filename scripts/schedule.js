@@ -50,7 +50,7 @@ async function loadResultsAndUpdateHTML(userId) {
                         + (answers.q2) + ":30 : Eat breakfast<br>"
                         + (answers.q2-(-1)) +  ":00 Start work";
 
-                        if(answers.q4 = "yes"){
+                        if(answers.q4 === "yes"){
                             str2 += "<br><br> Caffiene can stay in your system for upwards of 16:00 hours, keep it to your morning" + 
                             " routine."
                         }
