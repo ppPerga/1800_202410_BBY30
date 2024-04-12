@@ -18,14 +18,17 @@ List technologies (with version numbers), API's, icons, fonts, images, media or 
 * Firebase 8.0 (BAAS - Backend as a Service)
 * Google fonts
 * chart.js 
+* Sweet Alert
 
 ## 4. Complete setup/installion/usage
 State what a user needs to do when they come to your project.  How do others start using your code or application?
 Here are the steps ...
-* First they have to answer a few questions about their sleep scheduale
+* First, after the sign up, they have to answer a few questions about their sleep scheduale which there is a button for it in the main *    page.
 * Second, they would receive a schedule from the system to help them
 * And the last step is to commit to the instructions and new scheduale
 * User can input sleep length and quality to form a graph showing their data over time
+* Note: The user is able to input the quality of the sleep they had from the last night only one time per day, and overtime, the
+*   the chart would be filled out more and more everyday based on the data it will receive.
 
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
@@ -38,7 +41,8 @@ What we'd like to build in the future:
 * better schedule and notifications
 * better math for survey and schedule
 * survey accepts half hours and such and 12 hour clock with AM / PM
-* ...
+* More details on the meditation page
+* More details for the schedule
 	
 ## 7. Contents of Folder
 Content of the project folder:
@@ -81,6 +85,12 @@ It has the following subfolders and files:
     /profile.svg             # https://www.svgrepo.com/svg/522440/profile
     /colourPalette.png       # https://coolors.co/31593b-539258-bd8d65-caae91-6a2e35
     /logout.svg              # https://www.svgrepo.com/svg/334065/log-out
+    /bad.png
+    /moderate.png
+    /happy.png
+    /very bad.png
+    /very happy.png
+    /zzz.png                    
 ├── scripts                  # Folder for scripts
     /authentication.js       # 
     /client.js        
