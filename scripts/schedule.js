@@ -38,14 +38,14 @@ async function loadResultsAndUpdateHTML(userId) {
                         if (bedtime <= 0) {
                             bedtime += 24;
                         }
-                        str2 = "<b>Night</b>: <br>" 
-                        + (bedtime) + ":00 : Brush teeth, Shower<br>" + bedtime + ":30 : Meditation<br>";
+                        str2 = "<b>Night Time Scheduale</b>: <br>" 
+                        + (bedtime) + ":00 : Brush teeth, Shower<br>" + bedtime + ":30 : Meditation<br><br>";
                         
                         bedtime += 1;
                         if (bedtime >= 24) {
                             bedtime -= 24;
                         }
-                        str2 += bedtime + ":00 : Go to bed<br><b>Morning</b>:<br>"
+                        str2 += bedtime + ":00 : Go to bed<br><b>Morning Scheduale</b>:<br>"
                         + answers.q2 + ":00 : Wake up, brush teeth, shower<br>" 
                         + (answers.q2) + ":30 : Eat breakfast<br>"
                         + (answers.q2-(-1)) +  ":00 Start work";
@@ -55,9 +55,21 @@ async function loadResultsAndUpdateHTML(userId) {
                             " routine."
                         }
 
+                        str0 = "<b>Tips for before you sleep: </b><br>" 
+                        + "-Keep technology out of bedroom<br>"
+                        + "-Cold room will help you to fall asleep<br>"
+                        + "-meditation before bed helps for better sleep<br><br>"
+                        + "<b>Tips for after you wake up</b><br>"
+                        + "-Wake up at the same time youre waking up every day no matter what<br>"
+                        + "-Rub ice cube on your wrist to trigger the hormones of adrenaline<br>"
+                        + "-Have the sunlight in your room and open the curtains"
+                        
+
                         document.getElementById('scheduleDiv').innerHTML = str;
 
                         document.getElementById('scheduleDiv2').innerHTML = str2;
+
+                        document.getElementById('scheduleDiv0').innerHTML = str0;
 
 
 
