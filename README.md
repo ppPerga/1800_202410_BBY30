@@ -34,7 +34,7 @@ Here are the steps ...
 Here are some known bugs:
 * inputing a number greater than 24 on survey
 * survey only accepts full hours and only 24 hour clock (no 8:30 PM)
-* ...
+* the questionnaire for the graph inputs gets locked out for 12 hours after submitting, but its tied to the browser local storage and not the account, so if you have multiple accounts or log in on a different device the questions might be there or might not
 
 ## 6. Features for Future
 What we'd like to build in the future:
