@@ -65,6 +65,11 @@ div{
     color: white;
 }
 
+.tipsDiv {
+    text-align: center;
+    background-color: #0466c8;
+}
+
 .btn-primary {
     padding: 10px 10px;
     font-size: 18px;
