@@ -190,10 +190,10 @@ applyDarkMode();
 function showAlert(image) {
   switch (image) {
     case 'very_happy':
-      alert('That is great news! We recommend taking this time to build some good habits like meditating.');
+      alert('That is great news! Enjoy you day with any acitvity you like to do, hope you have a great day.');
       break;
     case 'moderate':
-      alert('That is ok! We recommend taking some time to meditate and reflect on how you could improve your mood.');
+      alert('You can boost up your mood by doing some simple activits');
       break;
       case 'very_bad':
       alert('We are sorry you feel this way. We recommend taking some time to meditate and reflect on what is causing you to feel this way.');
