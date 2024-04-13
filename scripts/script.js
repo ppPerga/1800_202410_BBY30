@@ -193,10 +193,10 @@ function showAlert(image) {
       alert('That is great news! Enjoy you day with any acitvity you like to do, hope you have a great day.');
       break;
     case 'moderate':
-      alert('You can boost up your mood by doing some simple activits');
+      alert('You can boost up your mood by doing some simple activites: \n -Take a walk outside.\n -Listen to your favorite upbeat music.\n -Take some time to meditate \n -Write down three things you are grateful for.');
       break;
       case 'very_bad':
-      alert('We are sorry you feel this way. We recommend taking some time to meditate and reflect on what is causing you to feel this way.');
+      alert('We all sometimes have our bad days, there is no need to worry. We recommend: \n - Practice mindfulness or meditation to bring yourself into the present moment. \n Avoid isolating yourself; even just being around others can help lift your mood. \n -Allow yourself to cry if you need to; it can be a healthy way to release pent-up emotions.');
       break;
     default:
       alert('Unknown image clicked!');
